@@ -1,15 +1,22 @@
+"use client";
+
+import Link from "next/link";
+
 export default function Navbar() {
   return (
-    <nav className="bg-blue-600 text-white p-4 flex justify-between">
-      <div className="font-bold">Impulse Lab</div>
-      <div className="space-x-4">
-        <a href="/" className="hover:underline">Home</a>
-        <a href="/services" className="hover:underline">Services</a>
-        <a href="/book-test" className="hover:underline">Book Test</a>
-        <a href="/reports" className="hover:underline">Reports</a>
-        <a href="/about" className="hover:underline">About</a>
-        <a href="/contact" className="hover:underline">Contact</a>
+    <header className="bg-blue-600 text-white shadow">
+      <div className="container mx-auto flex justify-between items-center p-4">
+        <h1 className="text-lg font-bold">Impulse Lab</h1>
+        <nav>
+          <ul className="flex gap-6">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/services">Our Services</Link></li>
+            <li><Link href="/reports">Reports</Link></li>
+            <li><Link href="/about">About</Link></li>
+            <li><Link href="/contact">Contact</Link></li>
+          </ul>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }

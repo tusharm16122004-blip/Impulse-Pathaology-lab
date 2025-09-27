@@ -1,20 +1,24 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { ReactNode } from 'react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+// src/app/layout.tsx
+import type { Metadata } from "next";
+import "./globals.css";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: 'Impulse Pathology Lab',
-  description: 'Trusted Diagnostic Partner',
+  title: "Impulse Pathology Lab",
+  description: "Accurate Diagnostics. Trusted Results. Your health, our priority.",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body className="flex flex-col min-h-screen">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="flex-grow">{children}</main>
         <Footer />
       </body>
     </html>
